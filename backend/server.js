@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB error:', err));
 app.use(cors({
-  origin: [],
+  origin: [https://mini-expense-tracker-alpha.vercel.app/],
   method: ['GET', 'POST'],
   credentials: true
 }
