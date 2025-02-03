@@ -16,16 +16,7 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.error('MongoDB error:', err));
-<<<<<<< HEAD
-app.use(cors({
-  origin: [https://mini-expense-tracker-alpha.vercel.app/],
-  method: ['GET', 'POST'],
-  credentials: true
-}
-));
-=======
 
->>>>>>> d1c1086 (some changes)
 
 app.use('/api/auth', authRoutes);
 app.use('/api/expenses', expenseRoutes);
