@@ -27,7 +27,7 @@ const ExpenseForm = ({ onAdd }) => {
 
     try {
       const response = await axios.post(
-        '${process.env.REACT_APP_API_URL}/api/expenses',
+        'http://localhost:5000/api/expenses',
         { amount: parsedAmount, category, date, description: description.trim() },
         { withCredentials: true }
       );

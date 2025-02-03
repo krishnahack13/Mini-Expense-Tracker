@@ -10,7 +10,7 @@ const Dashboard = () => {
   // Define fetchExpenses outside useEffect
   const fetchExpenses = async () => {
     try {
-      const res = await axios.get('${process.env.REACT_APP_API_URL}/api/expenses', { withCredentials: true });
+      const res = await axios.get('http://localhost:5000/api/expenses', { withCredentials: true });
       setExpenses(res.data);
     } catch (err) {
       alert('Failed to fetch expenses');

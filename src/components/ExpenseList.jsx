@@ -21,7 +21,7 @@ const ExpenseList = ({ expenses, onDelete }) => {
   const handleUpdate = async (id) => {
     try {
       await axios.put(
-        `${process.env.REACT_APP_API_URL}/api/expenses/${id}`,
+        `http://localhost:5000/api/expenses/${id}`,
         editData,
         { withCredentials: true }
       );
@@ -35,7 +35,7 @@ const ExpenseList = ({ expenses, onDelete }) => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `${process.env.REACT_APP_API_URL}/api/expenses/${id}`,
+        `http://localhost:5000/api/expenses/${id}`,
         { withCredentials: true }
       );
       onDelete(); // Refresh the expense list

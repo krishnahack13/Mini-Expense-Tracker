@@ -9,7 +9,7 @@ const expenseRoutes = require('./routes/expenseRoutes');
 dotenv.config();
 
 const app = express();
-app.use(cors({ credentials: true, origin: '${process.env.REACT_APP_API_URL}' }));
+app.use(cors({ credentials: true, origin: 'http://localhost:5173' }));
 app.use(cookieParser());
 app.use(express.json());
 
