@@ -10,7 +10,7 @@ const Dashboard = () => {
   // Define fetchExpenses outside useEffect
   const fetchExpenses = async () => {
     try {
-      const res = await axios.get('https://mini-expense-tracker-backend-ddpt.onrender.com/api/expenses', { withCredentials: true });
+      const res = await axios.get('${process.env.REACT_APP_BACKEND_URL}/api/expenses', { withCredentials: true });
       setExpenses(res.data);
     } catch (err) {
       alert('Failed to fetch expenses');
