@@ -9,7 +9,7 @@ const expenseRoutes = require('./routes/expenseRoutes');
 dotenv.config();
 
 const app = express();
-app.use(cors({ credentials: true, origin: 'https://mini-expense-tracker-frontend.onrender.com' }));
+app.use(cors({ credentials: true, origin: '${process.env.REACT_APP_FRONTEND_URL}.com' }));
 app.use(cookieParser());
 app.use(express.json());
 
