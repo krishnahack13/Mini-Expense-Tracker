@@ -21,7 +21,7 @@ const ExpenseList = ({ expenses, onDelete }) => {
   const handleUpdate = async (id) => {
     try {
       await axios.put(
-        `https://mini-expense-tracker-backend-ddpt.onrender.com/api/expenses/${id}`,
+        `${process.env.REACT_APP_API_URL}/api/expenses/${id}`,
         editData,
         { withCredentials: true }
       );
