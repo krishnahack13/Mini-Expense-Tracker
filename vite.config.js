@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        outDir: 'build',
+        outDir: 'dist',
         manualChunks: {
           // Group large dependencies into separate chunks
           react: ['react', 'react-dom'],
