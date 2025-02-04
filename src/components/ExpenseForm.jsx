@@ -27,7 +27,7 @@ const ExpenseForm = ({ onAdd }) => {
 
     try {
       const response = await axios.post(
-        'https://mini-expense-tracker-backend-ddpt.onrender.com/api/expenses',
+        '${process.env.REACT_APP_BACKEND_URL}/api/expenses',
         { amount: parsedAmount, category, date, description: description.trim() },
         { withCredentials: true }
       );
