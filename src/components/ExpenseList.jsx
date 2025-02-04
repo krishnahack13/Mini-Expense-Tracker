@@ -21,7 +21,7 @@ const ExpenseList = ({ expenses, onDelete }) => {
   const handleUpdate = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/expenses/${id}`,
+        `https://mini-expense-tracker-backend-ddpt.onrender.com/api/expenses/${id}`,
         editData,
         { withCredentials: true }
       );
@@ -35,7 +35,7 @@ const ExpenseList = ({ expenses, onDelete }) => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/expenses/${id}`,
+        `https://mini-expense-tracker-backend-ddpt.onrender.com/api/expenses/${id}`,
         { withCredentials: true }
       );
       onDelete(); // Refresh the expense list
