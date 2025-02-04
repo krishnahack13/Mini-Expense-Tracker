@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/register', { firstName, lastName, email, password });
+      const res = await axios.post('https://mini-expense-tracker-backend-ddpt.onrender.com/api/auth/register', { firstName, lastName, email, password });
       alert(res.data.message);
       navigate('/login');
     } catch (err) {
