@@ -1,9 +1,19 @@
+// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'build', // Ensure this matches the publish directory
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Group large dependencies into separate chunks
+          react: ['react', 'react-dom'],
+          mui: ['@mui/material', '@mui/icons-material'],
+          recharts: ['recharts'],
+        },
+      },
+    },
   },
 });
